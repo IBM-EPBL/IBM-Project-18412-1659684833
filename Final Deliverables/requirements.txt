@@ -1,0 +1,8 @@
+flask
+flask_cors
+requests
+flask_mysqldb
+ibm-watson>=5.1.0
+ibm-db
+ibm-cos-sdk
+opencv-python
