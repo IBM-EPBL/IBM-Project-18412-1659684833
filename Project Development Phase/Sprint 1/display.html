@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nutrition Assistant Manager</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <style>
+     body{
+      display: flex;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 15px;
+      background-image: url('https://image.freepik.com/free-photo/diet-food-background-concept-healthy-carbohydrates-carbs-products-fruits-vegetables-cereals-nuts-beans-dark-blue-concrete-background-copy-space-frame_136595-2921.jpg');
+      background-repeat:no-repeat;
+      background-size:cover;
+
+      }
+      .styled {
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 0.9em;
+        font-family: sans-serif;
+        min-width: 400px;
+        background: #888888;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        }
+      .styled thead tr {
+        background-color: #8ebf42;
+        color: #ffffff;
+        text-align: left;
+        }
+      .styled th,.styled td {
+        padding: 12px 15px;
+        }
+        .main{
+        border: 1px black;
+        }
+      th, td {
+      padding: 15px;
+      text-align: left;
+      color: white;
+        }
+      th {
+      background-color: #8ebf42;
+      color: white;
+      }
+      tr:hover {
+      background-color: #8ebf42;
+      }
+      .table-dis{
+        justify-content: center;
+        margin-top: 100px;
+      }
+      h2, h3{
+     color: white;
+     }
+    </style>
+</head>
+<body>
+<div class="heading1">
+    <h2>Welcome, to Nutriooz</h2>
+</div>
+<div class="table-dis">
+    <table class="styled">
+        <th class="main" colspan=2>Nutritional Values for {{x}}:</th>
+        </thead>
+          <tr>
+            <th>Nutrients</th>
+            <th>Nutritional Values</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for k, v in data.items() %}
+          <tr class="active-row">
+            <td>{{k}}</td>
+            <td>{{v}}</td>
+          </tr>
+            {% endfor %}
+        </tbody>
+        
+    </table>
+</div>
+</body>
+</html>
